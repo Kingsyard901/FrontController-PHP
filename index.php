@@ -1,6 +1,10 @@
 <?php
 #Har nu städat upp rejält från echos, testkod m.m.
 
+//2021-09-08 Ser ut som att jag kan använda följande för att förbättra koden
+# __DIR__
+# if empty
+
 //Mina vars
 $requested_endpoint = trim(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH), "/");
 //Från list kan jag nu hämta via index från URI som användaren matar in.
