@@ -1,5 +1,5 @@
 <?php
-// echo 'Users';
+echo 'Users';
 
 // $clients = [
 //     ['name' => 'Tomas'],
