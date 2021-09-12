@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\style.css">
+    <title>Testing PHP</title>
+</head>
+<body>
+
 <?php
 
 //Mina vars
@@ -11,12 +22,30 @@ $list = explode("/", $requested_endpoint);
 $fileName = ('./view/' . end($list) . '.php');
 $fileNamePhp = ('./view/' . end($list));
 
-if (file_exists($fileName)) {
-    include $fileName;
-} elseif (file_exists($fileNamePhp)) {
-    include $fileNamePhp;
-} elseif ($fileName == './view/frontcontroller-php.php') {
-    include ('./view/home.php');
-} else {
-    include ('./view/404.php');
-}
+// if (file_exists($fileName)) {
+//     include $fileName;
+// } elseif (file_exists($fileNamePhp)) {
+//     include $fileNamePhp;
+// } elseif ($fileName == './view/frontcontroller-php.php') {
+//     include ('./view/home.php');
+// } else {
+//     include ('./view/404.php');
+// }
+
+
+
+
+include './class/pages.php';
+$testingerror = new Home();
+echo $testingerror->homepage();
+
+
+?>
+
+
+
+
+
+
+</body>
+</html>
