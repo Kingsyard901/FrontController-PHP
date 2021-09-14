@@ -2,6 +2,8 @@ Uppgifter att lösa
 # 1. Byt ut hela logiken till att endast använda file_exists() istället.
 # 2. När det fungerar (utan foreach, scandir, isset) så ta bort alla filer (som är webbsidor alltså) och flytta det som visas (html) till en class och där varje sida är en funktion i klassen (även 404 sidan).
 # 3. Tillåt inkommande data som t.ex. ett förnamn som också visas på en sida
-4. Säkra inkommande data så man inte kan inkludera skadlig kod (cross-site scripting ivf)
-5. Skapa en inloggningsida mot ett fast användarnamn och lösenord och lås alla andra sidor så man måste vara inloggad (session)
+# 4. Säkra inkommande data så man inte kan inkludera skadlig kod (cross-site scripting ivf)
+# 5. Skapa en inloggningsida mot ett fast användarnamn och lösenord och lås alla andra sidor så man måste vara inloggad (session)
 6. Säkra mot session hijacking
+    HENRIK: Lyckas inte testa detta på något bra sätt då jag bara får lokal adress ::1 (localhost)
+    Har gjort en "enkel" egen koll mot IP med en IF sats.

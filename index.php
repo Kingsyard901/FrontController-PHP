@@ -5,10 +5,18 @@ session_start();
 include './view/head.php';
 include './class/pages.php';
 
+//Som jag förstått det är det i "vissa" fall bra att låsa session mot IP, men jag lyckas tyvärr inte testa det på ett vettigt sätt.
+$fakeadress = '::1'; //min localhost är ::1 Du kan testa sätta ::2 för att döda sessionen.
+$IP = getenv ( "REMOTE_ADDR" );
+if ($IP !== $fakeadress) {
+    echo 'Your session data is not correct. Session deleted.';
+    unset($_SESSION['username']);
+    // Jag lyckas inte testa övrig kod jag hittar för att "döda eller nolla" sessioner och cookies.
+}
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['username'] = htmlspecialchars(ucfirst($_POST['username']));
 }
 
 $page = basename($_GET['path']);
