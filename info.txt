@@ -7,3 +7,7 @@ Uppgifter att lösa
 ## 6. Säkra mot session hijacking
     HENRIK: Lyckas inte testa detta på något bra sätt då jag bara får lokal adress ::1 (localhost)
     Har gjort en "enkel" egen koll mot IP med en IF sats.
+
+
+#Ny branch! Tilläggsuppgift
+# 7. Flytta HTML från funktionerna till att istället läsas från en DB.
