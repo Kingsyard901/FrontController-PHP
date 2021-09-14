@@ -4,6 +4,6 @@ Uppgifter att lösa
 # 3. Tillåt inkommande data som t.ex. ett förnamn som också visas på en sida
 # 4. Säkra inkommande data så man inte kan inkludera skadlig kod (cross-site scripting ivf)
 # 5. Skapa en inloggningsida mot ett fast användarnamn och lösenord och lås alla andra sidor så man måste vara inloggad (session)
-6. Säkra mot session hijacking
+## 6. Säkra mot session hijacking
     HENRIK: Lyckas inte testa detta på något bra sätt då jag bara får lokal adress ::1 (localhost)
     Har gjort en "enkel" egen koll mot IP med en IF sats.
