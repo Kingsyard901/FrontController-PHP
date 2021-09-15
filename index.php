@@ -2,6 +2,9 @@
 
 session_start();
 
+
+include './view/testdb.php';
+
 include './view/head.php';
 include './class/pages.php';
 

@@ -22,6 +22,7 @@ class About {
 
 // Endast via access Henrik
 // Omskriven med if för att verifiera via session.
+// Ändrat om lite till att hämta från db på "Henrik".
 class Henrik1 {
     public function henrik1() {
         if (!$_SESSION) {
@@ -49,6 +50,21 @@ class Tomas1 {
 }
 // END OF Endast access
 
+// Specifik output baserat på databas och login
+class User {
+    public function user() {
+        if (!$_SESSION) {
+            echo 'You are not logged in. </br>';
+            include './view/yourname.php';
+        } else {
+            include './view/testdb';
+            echo 'Welcome '. $row['user_first'] .'!';
+        }
+        return;
+    }
+}
+// END OF Specifik output
+
 class Admin {
     public function admin() {
         ?>
@@ -59,13 +75,17 @@ class Admin {
     }
 }
 
+// Börjar hämta från DB här vem som är inloggad
 class Home {
     public function home() {
         if (!$_SESSION) {
-            echo 'You are not logged in. </br> You can try to log in with just the name Henrik or Tomas.';
+            echo 'You are not logged in. </br> You can try to log in with just the name Henrik or William.';
             include './view/yourname.php';
+        } elseif (empty($usersname)) {
+            echo 'Hi ' . $_SESSION['username'] . '!';
         } else {
-            echo 'Welcome '. $_SESSION['username'] .'!';
+            include './app/showuser.php';
+            echo 'Hi there ' . $usersname . '! You are now logged in.';
         }
         return;
     }
