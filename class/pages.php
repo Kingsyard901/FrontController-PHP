@@ -1,15 +1,5 @@
 <?php
 
-class Create {
-  public function create() {
-    if (!$_SESSION) {
-      include './view/createuser.php';
-    } else {
-      echo 'You are already logged in as ' . $_SESSION['username'];
-    }
-  }
-}
-
 class Page404 {
     public function fourofour() {
         ?>
@@ -32,7 +22,6 @@ class About {
 
 // Endast via access Henrik
 // Omskriven med if för att verifiera via session.
-// Ändrat om lite till att hämta från db på "Henrik".
 class Henrik1 {
     public function henrik1() {
         if (!$_SESSION) {
@@ -60,23 +49,6 @@ class Tomas1 {
 }
 // END OF Endast access
 
-// Specifik output baserat på databas och login
-class User {
-    public function user() {
-        if (!$_SESSION) {
-            echo 'You are not logged in. </br>';
-            include './view/yourname.php';
-        } else {
-          // Behöver lägga in if för att istället ta sessionanvändare om användare inte finns i db.
-            include './app/showuser.php';
-            echo 'Hi there ' . $usersname . '! <br>';
-            echo 'Your Email is:  ' . $usersemail . '<br>';
-        }
-        return;
-    }
-}
-// END OF Specifik output
-
 class Admin {
     public function admin() {
         ?>
@@ -87,18 +59,13 @@ class Admin {
     }
 }
 
-// Börjar hämta från DB här vem som är inloggad
 class Home {
     public function home() {
         if (!$_SESSION) {
-            echo 'You are not logged in. </br> You can try to log in with just the name Henrik or William.';
+            echo 'You are not logged in. </br> You can try to log in with just the name Henrik or Tomas.';
             include './view/yourname.php';
-            echo 'Or, you can register: <a href="create">Create Account </a>';
-        } elseif (empty($usersname)) {
-            echo 'Hi ' . $_SESSION['username'] . '!';
         } else {
-            include './app/showuser.php';
-            echo 'Hi there ' . $usersname . '! You are now logged in.';
+            echo 'Welcome '. $_SESSION['username'] .'!';
         }
         return;
     }
