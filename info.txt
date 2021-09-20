@@ -11,3 +11,9 @@ Uppgifter att lösa
 
 #Ny branch! Tilläggsuppgift
 # 7. Flytta HTML från funktionerna till att istället läsas från en DB.
+    HENRIK: Jag har inte flyttat allt, men har skapat kopplingar till Mariadb/mysql och testat
+    både prepared statements och "enkla" kopplinar för att både söka upp och logga in, hämta och visa data, samt
+    registrera en ny användare. Har även lagt in så att vissa länkar inte syns om man inte är inloggad och tvärtom.
+
+    Lyckades även få till det med css filen, det var .htacess filen som störde ut min koppling tidigare.
+    

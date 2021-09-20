@@ -8,3 +8,4 @@
         <title>My PHP Page</title>
     </head>
     <body>
+      <h1>Session- and databaseinformation.</h1>

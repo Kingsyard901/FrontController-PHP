@@ -1,4 +1,4 @@
-    
+
     <?php
 
     include './app/dbconn.php';
@@ -25,10 +25,7 @@
             while ($row = mysqli_fetch_assoc($result)) {
                 // echo 'Some testdata from Database: <br>';
                 $active = $row['user_first'];
-                // echo $row['user_first'] . ' ' . $row['user_last'] . '<br>', $row['user_email'] . '<br>', $row['user_uid'] . ': Have the password - ' . $row['user_pwd'] . '<br><br>';
+                echo $row['user_first'] . ' ' . $row['user_last'] . '<br>', $row['user_email'] . '<br>', $row['user_uid'] . ': Have the password - ' . $row['user_pwd'] . '<br><br>';
             }
         }
     ?>
-
-
-

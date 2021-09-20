@@ -1,5 +1,7 @@
 body {
-    padding: 15%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
 }
 
 h2 {
@@ -7,5 +9,13 @@ h2 {
 }
 
 .footer {
-    background-color: blueviolet;
+    background-color: black;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.footer a {
+  color: white;
 }

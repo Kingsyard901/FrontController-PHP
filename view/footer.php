@@ -2,6 +2,15 @@
 </br>
 </br>
     <a href="home">Home </a>
+    <?php
+      if (!$_SESSION) {
+        ?>
+        <a href="create">| Create Account </a>
+        <?php
+      } else {
+          echo '';
+      }
+     ?>
     <a href="about">| About </a>
     <a href="users">| Users </a>
     <a href="admin">| Admin </a>
@@ -24,6 +33,14 @@
         } else {
             ?>
             <a href="tomas1">| Tomas </a>
+            <?php
+        }
+
+        if (!$_SESSION) {
+            echo '';
+        } else {
+            ?>
+            <a href="user">| My Account </a>
             <?php
         }
 
