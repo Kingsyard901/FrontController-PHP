@@ -1,5 +1,5 @@
 <?php
-
+//Använder detta exempel för att visa förnamn och vilken email användare har på "user" sidan.
 include './app/dbconn.php';
 
 $searchname = $_SESSION['username'];

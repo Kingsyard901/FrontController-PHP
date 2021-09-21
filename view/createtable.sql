@@ -8,5 +8,6 @@ CREATE TABLE users (
     user_pwd varchar(256) not null
 );
 
+-- Använder denna för att mata in nya användare antingen via kod eller direkt i mysql MariaDB.
 INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd)
     VALUES ('Henrik', 'Ekelund', 'test@mail.com', 'Admin', '123');

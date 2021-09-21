@@ -1,4 +1,5 @@
-
+<!-- Detta är från tutorial för hur man kopplar upp och söker efter data i db med "Prepared Statements". Något jag behöver gå djupare i. -->
+<!-- Används för att säkra upp mot farlig input mot db. -->
     <?php
 
     include './app/dbconn.php';
@@ -25,6 +26,7 @@
             while ($row = mysqli_fetch_assoc($result)) {
                 // echo 'Some testdata from Database: <br>';
                 $active = $row['user_first'];
+                // Koden puttar sedan ut de kolumner som matchar den sökta/inloggade användaren.
                 echo $row['user_first'] . ' ' . $row['user_last'] . '<br>', $row['user_email'] . '<br>', $row['user_uid'] . ': Have the password - ' . $row['user_pwd'] . '<br><br>';
             }
         }

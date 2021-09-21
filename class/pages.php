@@ -1,5 +1,5 @@
 <?php
-
+//Registreringssidan.
 class Create {
   public function create() {
     if (!$_SESSION) {
@@ -9,7 +9,7 @@ class Create {
     }
   }
 }
-
+//404 sidan om man knappar in en sida i URL som inte finns.
 class Page404 {
     public function fourofour() {
         ?>
@@ -19,7 +19,7 @@ class Page404 {
         return;
     }
 }
-
+//Enkel visning av en statisk Aboutsida.
 class About {
     public function about() {
         ?>
@@ -31,8 +31,8 @@ class About {
 }
 
 // Endast via access Henrik
-// Omskriven med if för att verifiera via session.
-// Ändrat om lite till att hämta från db på "Henrik".
+// Om inloggad som "Henrik" så visas en speciell sida (denna).
+//Denna sida visas endast i footer om inloggad.
 class Henrik1 {
     public function henrik1() {
         if (!$_SESSION) {
@@ -45,7 +45,9 @@ class Henrik1 {
         return;
     }
 }
-
+// Endast via access Tomas1
+// Om inloggad som "Tomas" så visas en speciell sida (denna).
+//Denna sida visas endast i footer om inloggad.
 class Tomas1 {
     public function tomas1() {
         if (!$_SESSION) {
@@ -58,9 +60,10 @@ class Tomas1 {
         return;
     }
 }
-// END OF Endast access
 
-// Specifik output baserat på databas och login
+// Specifik output baserat på databas och login.
+//Om inloggad som registrerad så visas ditt namn och email från mysql på denna sida.
+//Denna sida visas endast i footer om inloggad.
 class User {
     public function user() {
         if (!$_SESSION) {
@@ -75,8 +78,8 @@ class User {
         return;
     }
 }
-// END OF Specifik output
 
+// En enkel statisk sida som alltid visas.
 class Admin {
     public function admin() {
         ?>
@@ -87,7 +90,7 @@ class Admin {
     }
 }
 
-// Börjar hämta från DB här vem som är inloggad
+// Om inloggad så får du en hälsningsfras på Homesidan.
 class Home {
     public function home() {
         if (!$_SESSION) {
@@ -104,6 +107,7 @@ class Home {
     }
 }
 
+//Denna sida är statisk och visar enbart en JSON.
 class Users {
 
       public function users() {
@@ -120,6 +124,7 @@ class Users {
 
 }
 
+// Denna triggar en Session unset, vilket "loggar ut" den som är inloggad.
 class Logout {
 
     public function logout() {

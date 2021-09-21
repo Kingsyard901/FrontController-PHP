@@ -1,3 +1,4 @@
+<!-- Vid inkludering visar denna registreringsformuläret som sedan puttar in den nya användardatan till db. -->
 <h3>Do you want to create an account?</h3>
 
 <form action="./app/createuserdb.php" method="post">

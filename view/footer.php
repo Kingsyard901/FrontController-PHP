@@ -3,7 +3,7 @@
 </br>
     <a href="home">Home </a>
     <?php
-      if (!$_SESSION) {
+      if (!$_SESSION) { //Om du inte är inloggad så får du valet att registrera dig.
         ?>
         <a href="create">| Create Account </a>
         <?php
@@ -16,7 +16,7 @@
     <a href="admin">| Admin </a>
 
     <?php
-        if (!$_SESSION) {
+        if (!$_SESSION) { //Om du är inloggad med namnet "Henrik" i Sessionen så visas länk till henrik1 sidan.
             echo '';
         } elseif ($_SESSION['username'] != 'Henrik') {
             echo '';
@@ -26,7 +26,7 @@
             <?php
         }
 
-        if (!$_SESSION) {
+        if (!$_SESSION) { //Om du är inloggad med namnet "Tomas" i Sessionen så visas länk till henrik1 sidan.
             echo '';
         } elseif ($_SESSION['username'] != 'Tomas') {
             echo '';
@@ -36,7 +36,7 @@
             <?php
         }
 
-        if (!$_SESSION) {
+        if (!$_SESSION) { //Den här sidan visas bara om det finns en aktiv session.
             echo '';
         } else {
             ?>
@@ -46,7 +46,7 @@
 
 
 
-        if (!$_SESSION) {
+        if (!$_SESSION) { //Om inloggad så får du alternativet att logga ut (namn) nere i footern.
             echo '';
         } else {
             ?>
